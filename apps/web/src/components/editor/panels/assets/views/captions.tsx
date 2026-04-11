@@ -259,13 +259,12 @@ export function Captions() {
 						</p>
 						<Button
 							type="button"
-							variant="outline"
 							className="mt-auto w-full"
 							onClick={handleImportClick}
 							disabled={isProcessing}
 						>
 							{isProcessing && <Spinner className="mr-1" />}
-							{isProcessing ? processingStep : "Import subtitle file"}
+							{isProcessing ? processingStep : "Import subtitles"}
 						</Button>
 						{error && (
 							<div className="bg-destructive/10 border-destructive/20 rounded-md border p-3">
@@ -274,7 +273,7 @@ export function Captions() {
 						)}
 						{warnings.length > 0 && (
 							<div className="rounded-md border border-amber-500/20 bg-amber-500/10 p-3">
-								<ul className="text-sm text-amber-700 space-y-1">
+								<ul className="space-y-1 text-sm text-amber-700">
 									{warnings.map((warning) => (
 										<li key={warning}>{warning}</li>
 									))}
